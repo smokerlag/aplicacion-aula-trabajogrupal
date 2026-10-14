@@ -87,7 +87,36 @@ Asimismo, se incorporará una ejecución de automatización como evidencia del p
 - Ejecución de automatización.
 - Informe con capturas y explicaciones del proceso.
 
-## 📄 Licencia
+## � API REST del gestor académico
+
+El backend expone la API REST para gestionar tareas académicas con almacenamiento en memoria.
+
+### Endpoints disponibles
+
+- `GET /api/health` — verifica que el servidor está activo.
+- `GET /api/tareas` — devuelve la lista completa de tareas.
+- `POST /api/tareas` — crea una nueva tarea. Requiere `titulo` y `responsable` no vacíos.
+- `PATCH /api/tareas/:id` — actualiza los campos permitidos de una tarea existente.
+- `DELETE /api/tareas/:id` — elimina una tarea por su `id`.
+
+### Ejemplo de payload
+
+```json
+{
+  "titulo": "Investigación de lectura",
+  "responsable": "Ana",
+  "completada": false
+}
+```
+
+### Respuestas esperadas
+
+- `200 OK` para consultas y actualizaciones exitosas.
+- `201 Created` cuando se registra una tarea.
+- `400 Bad Request` cuando faltan datos o son inválidos.
+- `404 Not Found` cuando la tarea no existe.
+
+## �📄 Licencia
 
 Este proyecto utiliza la licencia [MIT](LICENSE), que permite utilizar, modificar y distribuir el software de acuerdo con las condiciones establecidas en dicha licencia.
 
