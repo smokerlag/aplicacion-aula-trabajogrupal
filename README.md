@@ -87,7 +87,7 @@ Asimismo, se incorporará una ejecución de automatización como evidencia del p
 - Ejecución de automatización.
 - Informe con capturas y explicaciones del proceso.
 
-## � API REST del gestor académico
+Academic Manager rest API ## #
 
 El backend expone la API REST para gestionar tareas académicas con almacenamiento en memoria.
 
