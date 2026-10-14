@@ -1,4 +1,27 @@
-# React + TypeScript + Vite
+Import Type
+
+Cliente React y TypeScript con Vite para la API de tareas académicas.
+
+## Configuración de la API
+
+Configura `VITE_API_URL` con la URL base del backend. Puedes copiar `.env.example` a `.env.local` y ajustar su valor; el valor predeterminado del servicio es `http://localhost:3000`.
+
+El formulario y el listado usan `src/services/tareas.ts`; el modelo `Tarea` está en `src/types/Tarea.ts`. El servicio consume `VITE_API_URL` si se configura; si no, usa las rutas `/api` relativas y el proxy de desarrollo de Vite. Las funciones rechazan ante errores HTTP, de conexión o respuestas con formato inesperado.
+
+El contrato utilizado coincide con el backend actual: `id`, `titulo`, `responsable` y `completada`; el backend usa `PATCH /api/tareas/:id` para actualizar.
+
+## Desarrollo
+
+```sh
+npm install
+npm run dev
+```
+
+## Build
+
+```sh
+npm run build
+```
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
